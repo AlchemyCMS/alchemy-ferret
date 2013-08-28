@@ -1,0 +1,9 @@
+- name: article
+  contents:
+  - name: headline
+    type: EssenceText
+  - name: text
+    type: EssenceRichtext
+
+- name: searchresult
+  unique: true

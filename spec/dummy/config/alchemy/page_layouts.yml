@@ -1,0 +1,12 @@
+- name: intro
+  unique: true
+
+- name: standard
+  elements: [article]
+  autogenerate: [article]
+
+- name: search
+  unique: true
+  searchresults: true
+  elements: [searchresult]
+  autogenerate: [searchresult]
