@@ -1,0 +1,26 @@
+Alchemy::EssenceText.class_eval do
+
+  # Enable Ferret indexing.
+  #
+  acts_as_ferret(:fields => { :body => {:store => :yes} }, :remote => false)
+
+  # Ensures that the current setting for do_not_index gets updated in the db.
+  before_save { write_attribute(:do_not_index, description['do_not_index'] || false); return true }
+
+  # Disables the ferret indexing, if do_not_index attribute is set to true
+  #
+  # You can disable indexing in the elements.yml file.
+  #
+  # === Example
+  #
+  #   name: contact_form
+  #   contents:
+  #   - name: email
+  #     type: EssenceText
+  #     do_not_index: true
+  #
+  def ferret_enabled?(is_bulk_index = false)
+    !do_not_index?
+  end
+
+end
