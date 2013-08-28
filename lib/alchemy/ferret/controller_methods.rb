@@ -10,7 +10,7 @@ module Alchemy
       def self.included(controller)
         controller.send(:before_filter, :perform_search, :only => :show)
         controller.send(:helper_method, :find_search_result_page)
-        controller.send(:helper, 'alchemy/ferret/search_helper')
+        controller.send(:helper, 'alchemy/ferret/search')
       end
 
       # Performs a full text search with +Ferret+.
@@ -83,7 +83,3 @@ module Alchemy
     end
   end
 end
-
-Alchemy::BaseController.send(:include, Alchemy::Ferret::ControllerMethods)
-Alchemy::PasswordsController.send(:include, Alchemy::Ferret::ControllerMethods)
-Alchemy::UserSessionsController.send(:include, Alchemy::Ferret::ControllerMethods)
