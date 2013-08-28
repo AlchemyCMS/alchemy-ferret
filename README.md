@@ -1,6 +1,6 @@
-# Alchemy CMS Ferret Search
+# Alchemy CMS 3.0 Ferret Search
 
-This gemm provides the from Alchemy 3.0 extracted Ferret full text search.
+This gem provides the Ferret full text search, that was extracted from Alchemy 3.0
 
 ## Installation
 

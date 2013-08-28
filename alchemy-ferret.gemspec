@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Alchemy::Ferret::VERSION
   spec.authors       = ["Thomas von Deyen"]
   spec.email         = ["alchemy@magiclabs.de"]
-  spec.description   = %q{Ferret search for Alchemy CMS}
-  spec.summary       = %q{Adds Ferret full text search to Alchemy CMS}
+  spec.description   = %q{Ferret search for Alchemy CMS 3.0}
+  spec.summary       = %q{This gem provides the Ferret full text search, that was extracted from Alchemy 3.0}
   spec.homepage      = "http://alchemy-cms.com"
   spec.license       = "BSD"
 
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^spec/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "alchemy_cms"
+  spec.add_runtime_dependency "alchemy_cms", ["3.0.0.dev"]
   spec.add_runtime_dependency "acts_as_ferret", ["~> 0.5"]
 
   spec.add_development_dependency "bundler", "~> 1.3"
