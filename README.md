@@ -4,17 +4,18 @@ This gem provides the Ferret full text search, that was extracted from Alchemy 3
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this lines to your application's Gemfile:
 
     gem 'alchemy-ferret'
+    gem 'acts_as_ferret', github: 'tvdeyen/acts_as_ferret', branch: 'rails-4'
+
+*) Note about acts_as_ferret version
+
+ActsAsFerret is not yet Rails 4 compatible, so you need to use a Rails 4 compatible version.
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install alchemy-ferret
 
 ## Usage
 
