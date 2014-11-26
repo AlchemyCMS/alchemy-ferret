@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^spec/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "alchemy_cms", ["3.0.0.dev"]
+  spec.add_runtime_dependency "alchemy_cms", ["~> 3.0.0"]
   spec.add_runtime_dependency "acts_as_ferret", ["~> 0.5"]
 
   spec.add_development_dependency "bundler", "~> 1.3"
