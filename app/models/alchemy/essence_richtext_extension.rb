@@ -5,7 +5,7 @@ Alchemy::EssenceRichtext.class_eval do
   acts_as_ferret(:fields => { :stripped_body => {:store => :yes} }, :remote => false)
 
   # Ensures that the current setting for do_not_index gets updated in the db.
-  before_save { write_attribute(:do_not_index, description['do_not_index'] || false); return true }
+  before_save :update_do_not_index
 
   # Disables the ferret indexing, if do_not_index attribute is set to true
   #
@@ -23,4 +23,11 @@ Alchemy::EssenceRichtext.class_eval do
     !do_not_index?
   end
 
+  private
+
+  def update_do_not_index
+    write_attribute(:do_not_index, description['do_not_index'] || false)
+    true
+  end
+  
 end
